@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body, html {
+    min-height: 100vh;
+    background: linear-gradient(#18122B, #635985);
+    height: 100%;
+    margin: 0;
+}
+
+.bg {
+    /* The image used */
+    background-image: url("images/stars.png");
+  
+    /* Full height */
+    height: 100%; 
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10000;
+}
+
+nav .logo {
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul li {
+    list-style: none;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    padding: 6px 15px;
+    color: #fff;
+    border-radius: 20px;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    background: #fff;
+    color: #2b1055;
+}
+
+nav .checkbox {
+    display: none;
+}
+
+nav input {
+    display: none;
+}
+
+nav .checkbox i {
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
+
+ul {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    list-style: none;
+    transition: left 0.3s;
+}
+
+ul li a:hover,
+ul li a.active {
+    border-top-color: var(--secondary-color);
+    border-bottom-color: var(--secondary-color);
+}
+
+:root{
+    --primary-color: #3E54AC;
+    --primary-color-dark: #3E54AC;
+    --secondary-color: #3E54AC;
+    --text-dark: #1f2937;
+    --text-light: #6b7280;
+    --extra-light: #EEEEEE;
+
+    --max-width: 1080px;
+}
+
+.section__container {
+    min-height: 100vh;
+    min-height: 100svh;
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 1rem;
+    display: flex;
+}
+
+.section__container .content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.subtitle {
+    font-size: 25px;
+    letter-spacing: 2px;
+    color: var(--extra-light);
+    font-weight: 600;
+}
+
+.title {
+   font-size: 3rem; 
+   font-weight: 400;
+   color: white;
+}
+
+.title span {
+    font-weight: 700;
+}
+
+.description {
+    line-height: 1.5rem;
+    color: white;
+}
+
+.action__btns button {
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 1rem 2rem;
+    outline: none;
+    border-radius: 50px;
+    border: 2px solid #18122B;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.action__btns .hire__me {
+    background-color: #18122B;
+    color: #ffffff;
+}
+
+.action__btns .hire__me:hover {
+    background-color: white;
+    color: #18122B;
+}
+
+.action__btns .portfolio {
+    color: #18122B;
+}
+
+.action__btns .portfolio:hover {
+    background-color: #18122B;
+    color: #ffffff;
+}
+
+
+@media screen and (width < 750px) {
+
+    nav .checkbox {
+        display: block;
+    }
+
+    ul {
+        position: absolute;
+        width: 100%;
+        height: calc(100vh - 85px);
+        height: calc(100svh - 85px);
+        left: -100%;
+        top: 80px;
+        background-color: #18122B;
+        flex-direction: column;
+        justify-content: center;
+        gap: 5rem;
+    }
+
+    nav #check:checked ~ ul{
+        left: 0;
+    }
+
+    ul li a {
+        font-size: 1.5rem;
+    }
+
+    .section__container {
+        padding: 8rem 1rem;
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .action__btns {
+        margin: auto;
+    }
+}
